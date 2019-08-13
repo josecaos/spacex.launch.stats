@@ -1,17 +1,20 @@
 {
   "name": "spacex_launch_stats",
   "version": "1.0.0",
-  "description": "List of space missions",
+  "description": "List of SpaceX Missions",
   "main": "server.js",
   "scripts": {
     "test": "jist",
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\" "
   },
-  "author": "",
+  "author": "josecaos",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.0",
+    "concurrently": "^4.1.1",
     "express": "^4.17.1",
     "express-graphql": "^0.9.0",
     "graphql": "^14.4.2"
