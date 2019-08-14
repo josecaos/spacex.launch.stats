@@ -1,7 +1,7 @@
 const express = require("express")
 const graphqlHTTP = require("express-graphql")
-const cors = require('cors')
 const schema = require("./gqlschema")
+const cors = require('cors')
 //
 const app = express()
 const PORT = process.env.PORT || 5000// 5000 for development
@@ -14,6 +14,7 @@ app.use("/gqlschema", graphqlHTTP({
 }))
 
 app.listen(PORT, () => console.log(`Servidor inicializado en el puerto: ${PORT}`))
+// app.listen(5000, () => console.log(`Servidor inicializado en http://localhost:${PORT}`))
 
 // Inicia Servidor: npm run server
 //Para probar querys -> http://localhost:5000/graphql

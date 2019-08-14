@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import gql from 'graphql-tag'
-import {Query} from 'react-apollo'
+import {Query, Mutation} from 'react-apollo'
 
 const LAUNCHES_QUERY = gql`
   query LaunchesQuery {
@@ -11,21 +11,21 @@ const LAUNCHES_QUERY = gql`
       launch_success
     }
   }
-`
+`;
 export class Launches extends Component {
 
   render() {
     return (
       <div>
-        <h1>Launches</h1>
+        <h1 className="text-center">Launches</h1>
         <Query query={LAUNCHES_QUERY}>
           {
             ({loading,error,data}) => {
 
               if(loading) return <h3> Loading ... </h3>
-              // if(error) console.log(error)
+              if(error) console.log(error)
               console.log(data);
-              return <h1>YEAHHH</h1>
+              return <h1 className="text-center">YEAHHH</h1>
             }
           }
         </Query>
