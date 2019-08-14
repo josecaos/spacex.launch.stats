@@ -6,7 +6,7 @@ const cors = require('cors')
 const app = express()
 const PORT = process.env.PORT || 5000// 5000 for development
 
-// permite cross-origin
+// permite cross-origin para front y back en distintos puertos
 app.use(cors())
 
 app.use("/graphql", graphqlHTTP({

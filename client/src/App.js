@@ -1,7 +1,7 @@
 import React from 'react'
 import ApolloClient from 'apollo-boost'
 import {ApolloProvider} from 'react-apollo'
-import Launches from './components/launches/Launches'
+import {Launches} from './components/launches/Launches'
 import './App.css'
 import logo from './img/spacex.logo.png'
 //
@@ -9,9 +9,6 @@ import logo from './img/spacex.logo.png'
 
 const client = new ApolloClient({
   uri: 'http://localhost:5000/graphql',// URI, no URL
-  // fetchOptions: {
-  //   mode: 'no-cors',
-  // }
 })
 
 function App() {
