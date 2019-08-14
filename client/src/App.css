@@ -5,6 +5,11 @@
   --padding-3: 32px;
 }
 /*  */
+.App {
+  padding: 0 var(--padding-2);
+  margin: 0 auto;
+  max-width: 960px;
+}
 ul { margin: 0}
 /* header */
 header {
@@ -17,7 +22,7 @@ header {
 header div img {
   animation: Blured infinite 5s linear;
   pointer-events: none;
-  height: 40px;
+  height: 36px;
   width: auto;
 }
 /*  */

@@ -1,24 +1,28 @@
 import React from 'react'
-import ApolloClient from 'apolo-boost'
-import ApolloProvider from 'react-apolo'
+import ApolloClient from 'apollo-boost'
+import {ApolloProvider} from 'react-apollo'
 import logo from './img/spacex.logo.png'
 import './App.css'
+//
+import Launches from './components/launches/Launches'
+//
 
 const client = new ApolloClient({
-  url: 'http://localhost:5000/graphql'
+  uri: "http://localhost:5000/graphql"// URI, no URL
 })
 
 function App() {
   return (
     <ApolloProvider client={client}>
-    <div className="App">
+    <main className="App">
       <header>
         <div>
           <img src={logo} alt="SpaceX logo"/>
         </div>
       </header>
-    </div>
-    <ApolloProvider />
+      <Launches />
+    </main>
+    </ApolloProvider>
   );
 }
 
