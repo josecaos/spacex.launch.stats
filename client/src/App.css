@@ -1,17 +1,17 @@
 /* Estilos base */
 @import "./bootstrap.min.css";
-@import "https://fonts.googleapis.com/css?family=Play|Space+Mono|Monoton&display=swap";
+@import "https://fonts.googleapis.com/css?family=Play|Space+Mono|Orbitron&display=swap";
 /* variables */
 :root {
   --font-1: 'Space Mono', sans-serif;
   --font-2: 'Play', sans-serif;
-  --font-3: 'Monoton', sans-serif;
+  --font-3: 'Orbitron', sans-serif;
   --padding-1: 8px;
   --padding-2: 16px;
   --padding-3: 32px;
 }
 /*  */
-body {
+body, p, div, section, li {
   font-family: var(--font-1);
 }
 h1, h2, h3, h4, h5, h6 {
