@@ -9,9 +9,9 @@ import logo from './img/spacex.logo.png'
 
 const client = new ApolloClient({
   uri: 'http://localhost:5000/graphql',// URI, no URL
-  fetchOptions: {
-    mode: 'no-cors',
-  }
+  // fetchOptions: {
+  //   mode: 'no-cors',
+  // }
 })
 
 function App() {

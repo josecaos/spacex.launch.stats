@@ -8,15 +8,13 @@ const LAUNCHES_QUERY = gql`
       flight_number
       mission_name
       launch_date_local
-      launch_success
+      launch_succes
     }
   }
 `
 
 export class Launches extends Component {
-  // @Path("/your-path-here")
-  // @Consumes(MediaType.APPLICATION_JSON)
-  // @Produces(MediaType.APPLICATION_JSON)
+
   render() {
     return (
       <div>
@@ -27,7 +25,7 @@ export class Launches extends Component {
 
               if(loading) return <h3> Loading ... </h3>
               if(error) console.log(error)
-              // console.log(data);
+              console.log(data);
 
               return <h1 className="text-center">LISTA DE LANZAMIENTOS</h1>
             }

@@ -7,9 +7,9 @@ const app = express()
 const PORT = process.env.PORT || 5000// 5000 for development
 
 // permite cross-origin
-// app.use(cors())
+app.use(cors())
 
-app.use("/gqlscheme", graphqlHTTP({
+app.use("/graphql", graphqlHTTP({
   schema: schema,
   graphiql: true
 }))
