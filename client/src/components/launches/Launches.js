@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import gql from 'graphql-tag'
-import {Query, Mutation} from 'react-apollo'
+import {Query} from 'react-apollo'
 
 const LAUNCHES_QUERY = gql`
   query LaunchesQuery {
@@ -11,9 +11,12 @@ const LAUNCHES_QUERY = gql`
       launch_success
     }
   }
-`;
-export class Launches extends Component {
+`
 
+export class Launches extends Component {
+  // @Path("/your-path-here")
+  // @Consumes(MediaType.APPLICATION_JSON)
+  // @Produces(MediaType.APPLICATION_JSON)
   render() {
     return (
       <div>
@@ -24,8 +27,9 @@ export class Launches extends Component {
 
               if(loading) return <h3> Loading ... </h3>
               if(error) console.log(error)
-              console.log(data);
-              return <h1 className="text-center">YEAHHH</h1>
+              // console.log(data);
+
+              return <h1 className="text-center">LISTA DE LANZAMIENTOS</h1>
             }
           }
         </Query>

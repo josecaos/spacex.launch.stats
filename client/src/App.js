@@ -8,20 +8,23 @@ import logo from './img/spacex.logo.png'
 //
 
 const client = new ApolloClient({
-  uri: 'http://localhost:5000/graphql'// URI, no URL
+  uri: 'http://localhost:5000/graphql',// URI, no URL
+  fetchOptions: {
+    mode: 'no-cors',
+  }
 })
 
 function App() {
   return (
     <ApolloProvider client={client}>
-    <main className="App">
-      <header>
-        <div>
-          <img src={logo} alt="SpaceX logo"/>
-        </div>
-      </header>
-      <Launches />
-    </main>
+      <main className="App">
+        <header>
+          <div>
+            <img src={logo} alt="SpaceX logo"/>
+          </div>
+        </header>
+        <Launches />
+      </main>
     </ApolloProvider>
   );
 }

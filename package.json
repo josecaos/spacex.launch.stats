@@ -4,7 +4,7 @@
   "description": "List of SpaceX Missions",
   "main": "server.js",
   "scripts": {
-    "test": "jist",
+    "test": "jest",
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
